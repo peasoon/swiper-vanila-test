@@ -1,0 +1,8 @@
+/*@import "./blocks/header.scss";
+@import "./blocks/footer.scss";*/
+@import "./blocks/*.scss";
+
+body {
+  background-color: tomato;
+  background-image: url("./../img/jopa copy 2.jpg");
+}
