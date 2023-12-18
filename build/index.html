@@ -8,13 +8,72 @@
   </head>
   <body>
     <header class="header">
-  <h1>Yaytso</h1>
-</header> <footer class="footer">
-  <h1>Footer</h1>
-</footer>
+  <nav class="header__nav header-nav">
+    <ul class="header-nav__list">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contacts</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Prices</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <img src="./../img/jopa.jpg" alt="">
+    <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide my-slide">
+      <div class="my-slide">
+  <img src=./../img/juho-luomala-K2AWz4lXrAM-unsplash.jpg alt="">
+  <div class="darken"></div>
+  <span class="my-slide__title">Slide1</span>
+</div>
 
+    </div>
+    <div class="swiper-slide my-slide">
+      <div class="my-slide">
+  <img src=./../img/kenny-cinders-7qRM11Kmnh4-unsplash.jpg alt="">
+  <div class="darken"></div>
+  <span class="my-slide__title">Slide 2</span>
+</div>
+
+    </div>
+    <div class="swiper-slide my-slide">
+      <div class="my-slide">
+  <img src=./../img/mars-plex-knH05eGDEwc-unsplash.jpg alt="">
+  <div class="darken"></div>
+  <span class="my-slide__title">Slide 3</span>
+</div>
+
+    </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+    <div class="socials">
+  <div class="socials__icon">
+  <svg><use xlink:href=./../img/icons/1.svg#icon_1></use></svg>
+</div>
+  <div class="socials__icon">
+  <svg><use xlink:href=./../img/icons/2.svg#icon_2></use></svg>
+</div>
+  <div class="socials__icon">
+  <svg><use xlink:href=./../img/icons/3.svg#icon_3></use></svg>
+</div>
+  <div class="socials__icon">
+  <svg><use xlink:href=./../img/icons/4.svg#icon_4></use></svg>
+</div>
+</div>
+    
     <script src="./js/index.bundle.js"></script>
   </body>
 </html>

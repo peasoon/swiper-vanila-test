@@ -2,6 +2,14 @@
 @import "./blocks/footer.scss";*/
 @import "./blocks/*.scss";
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: tomato;
   background-image: url("./../img/jopa copy 2.jpg");

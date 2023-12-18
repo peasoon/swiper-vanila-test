@@ -1,0 +1,26 @@
+.socials {
+  width: 50px;
+  height: 300px;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  z-index: 20;
+  overflow: clip;
+  color: #fff;
+  svg {
+    width: 3.125rem;
+    height: 3.125rem;
+    use {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.socials__icon {
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    color: red;
+  }
+}

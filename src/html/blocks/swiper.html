@@ -1,0 +1,28 @@
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide my-slide">
+      @@include('./slide.html',{ "title":"Slide1",
+      "href":"./../img/juho-luomala-K2AWz4lXrAM-unsplash.jpg" })
+    </div>
+    <div class="swiper-slide my-slide">
+      @@include('./slide.html',{ "title":"Slide 2",
+      "href":"./../img/kenny-cinders-7qRM11Kmnh4-unsplash.jpg" })
+    </div>
+    <div class="swiper-slide my-slide">
+      @@include('./slide.html',{ "title":"Slide 3",
+      "href":"./../img/mars-plex-knH05eGDEwc-unsplash.jpg" })
+    </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>

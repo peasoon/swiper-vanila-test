@@ -12,33 +12,35 @@ import notify from "gulp-notify";
 import webpack from "webpack-stream";
 import webpackConfig from "./../webpack.config.js";
 import babel from "gulp-babel";
-import imagemin from "gulp-imagemin";
+import imagemin, { svgo } from "gulp-imagemin";
 import changed from "gulp-changed";
 import sassGlob from "gulp-sass-glob";
-import newer from 'gulp-newer'
+import newer from "gulp-newer";
 
 const fullSass = gulpSass(sass);
 
 gulp.task("html:dev", () => {
-  return gulp
-    .src(["./src/html/**/*.html", "!./src/html/blocks/*.html"])
-    .pipe(
-      plumber({
-        errorHandler: notify.onError({
-          title: "HTML",
-          message: "Error <%= error.message %>",
-          sound: "false",
-        }),
-      })
-    )
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "@file",
-      })
-    )
-    //.pipe(newer("./build"))
-    .pipe(gulp.dest("./build"));
+  return (
+    gulp
+      .src(["./src/html/**/*.html", "!./src/html/blocks/*.html"])
+      .pipe(
+        plumber({
+          errorHandler: notify.onError({
+            title: "HTML",
+            message: "Error <%= error.message %>",
+            sound: "false",
+          }),
+        })
+      )
+      .pipe(
+        fileinclude({
+          prefix: "@@",
+          basepath: "@file",
+        })
+      )
+      //.pipe(newer("./build"))
+      .pipe(gulp.dest("./build"))
+  );
 });
 
 gulp.task("scss:dev", () => {
@@ -68,7 +70,27 @@ gulp.task("images:dev", () => {
   return gulp
     .src("./src/img/**/*")
     .pipe(changed("./build/img"))
-    .pipe(imagemin({ verbose: true }))
+    .pipe(
+      imagemin(
+        [
+          svgo({
+            plugins: [
+              {
+                name: "removeViewBox",
+                active: false,
+              },
+              {
+                name: "cleanupIDs",
+                active: false,
+              },
+            ],
+          }),
+        ],
+        {
+          verbose: true,
+        }
+      )
+    )
     .pipe(gulp.dest("./build/img"));
 });
 

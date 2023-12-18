@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "-": "^0.0.1",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",

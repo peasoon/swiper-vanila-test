@@ -1,9 +1,26 @@
 .header {
-  background-color: grey;
-  padding: 100px 0;
-  font-size: 38px;
-  text-align: center;
-  @media (max-width: 1200px) {
-    font-size: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  z-index: 20;
+  pointer-events: none;
+  width: 100%;
+}
+
+.header__nav {
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.header-nav__list {
+  display: flex;
+  list-style: none;
+  a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 1.25rem;
+    pointer-events: all;
   }
 }
